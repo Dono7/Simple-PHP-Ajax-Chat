@@ -1,11 +1,11 @@
 <?php
-require_once "../utils/Chat.php";
+require_once "utils/Chat.php";
 $chat = new Chat();
 
 // Adding the message to the chat
 // Supposing that the client sent a correct request with the 3 fields: name, message and time
 $messageToAdd = new stdClass();
-$messageToAdd->name = $_POST['name'];
+$messageToAdd->username = $_POST['username'];
 $messageToAdd->message = $_POST['message'];
 $messageToAdd->time = $_POST['time'];
 

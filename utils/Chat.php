@@ -15,10 +15,10 @@ class Chat {
 	}
 
 	// Get the messages, add the new one, and then save it in the json
-	private function addMessage($message) {
-		$messages = this->loadMessagesJson();
+	public function addMessage($message) {
+		$messages = $this->loadMessagesJson();
 		$messages[] = $message;
-		$json = json_encode($messages);
+		$json = json_encode($messages, JSON_PRETTY_PRINT);
 		file_put_contents('data/messages.json', $json);
 	}
 

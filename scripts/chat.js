@@ -10,7 +10,21 @@ function getMessagesAndRender() {
 function renderMessages(data) {
 	$("#chat-messages").html("")
 	data.forEach(function (message) {
-		$("#chat-messages").append(`<div class="message">${message.username} : ${message.text}</div>`)
+		$("#chat-messages").append(`<div class="message">${message.username} : ${message.message}</div>`)
+	})
+}
+
+function sendMessage() {
+	const username = $("#username").val()
+	const message = $("#message").val()
+	const time = new Date().toJSON() // Get the current time
+	const data = { username, message, time }
+	// Send the new message to the server
+	$.post("postMessages.php", data, function (data) {
+		// After sending the message, clear the input field
+		// And update the messages
+		$("#message").val("")
+		renderMessages(data)
 	})
 }
 
@@ -18,3 +32,9 @@ function renderMessages(data) {
 setInterval(() => {
 	getMessagesAndRender()
 }, 2000)
+
+// Cancel redirection and send message
+$("#chat-form").submit(function (event) {
+	event.preventDefault()
+	sendMessage(event)
+})
