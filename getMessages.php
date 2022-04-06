@@ -1,5 +1,5 @@
 <?php
-require_once "../utils/Chat.php";
+require_once "utils/Chat.php";
 $chat = new Chat();
 
 $messages = $chat->getMessages();
