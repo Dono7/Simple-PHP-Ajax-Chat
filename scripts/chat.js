@@ -38,3 +38,10 @@ $("#chat-form").submit(function (event) {
 	event.preventDefault()
 	sendMessage(event)
 })
+
+// When the user press enter, send the message
+$("#chat-form").on("keypress", function (event) {
+	if (event.which == 13) {
+		sendMessage(event)
+	}
+})
