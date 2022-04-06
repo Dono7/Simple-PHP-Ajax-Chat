@@ -11,6 +11,9 @@
 
 	<!-- Scripts -->
 	<script defer src="scripts/chat.js"></script>
+
+	<!-- Style -->
+	<link rel="stylesheet" href="style/main.css">
 </head>
 <body>
 	<h1>Chat Example with AJAX & PHP</h1>
@@ -18,16 +21,21 @@
 	<p>
 		See the 
 		<a href="https://github.com/Dono7/Simple-PHP-Ajax-Chat" target="_blank">Github repo</a>
-		to have a guide about what each page is made for.
+		to have a guide about what each file is used to.
 	</p>
 
-	<div id="chat-container">
-		<div id="chat-messages"></div>
-		<form id="chat-form">
-			<input type="text" name="username" id="username" placeholder="Username">
-			<textarea name="message" id="message" placeholder="Type your message here..."></textarea>
-			<input type="submit" value="Send">
-		</form>
+	<p>You can open this page in several browsers and see that every window will get updated with the messages from others.</p>
+
+	<div class="chat-wrapper">
+
+		<div id="chat-container">
+			<div id="chat-messages"></div>
+			<form id="chat-form">
+				<input type="text" name="username" id="username" placeholder="Name">
+				<input type="text" name="message" id="message" placeholder="Type your message here...">
+				<input type="submit" value="Send">
+			</form>
+		</div>
 	</div>
 
 </body>

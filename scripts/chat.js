@@ -10,7 +10,7 @@ function getMessagesAndRender() {
 function renderMessages(data) {
 	$("#chat-messages").html("")
 	data.forEach(function (message) {
-		$("#chat-messages").append(`<div class="message">${message.username} : ${message.message}</div>`)
+		$("#chat-messages").append(`<div class="message"><span>${message.username}</span> : ${message.message}</div>`)
 	})
 }
 
@@ -37,11 +37,4 @@ setInterval(() => {
 $("#chat-form").submit(function (event) {
 	event.preventDefault()
 	sendMessage(event)
-})
-
-// When the user press enter, send the message
-$("#chat-form").on("keypress", function (event) {
-	if (event.which == 13) {
-		sendMessage(event)
-	}
 })

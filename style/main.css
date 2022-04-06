@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+	padding: 10px 45px;
+	font-family: 'Roboto';
+}
+
+.chat-wrapper {
+	width: 100%;
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+}
+
+#chat-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	height: 100%;
+	height: 500px;
+	max-width: 500px;
+	background-color: #eee;
+	border-radius: 18px;
+	padding: 18px
+}
+
+#chat-messages {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+
+.message span {
+	font-style: italic;
+	font-weight: bold;
+}
+
+#chat-form {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+#chat-form input#username {
+	width: 50px;
+	height: 30px;
+	padding: 0 0 0 6px;
+	border: none;
+	border-right: 1px solid grey;
+	border-radius: 6px 0 0 6px;
+	outline: none;
+	font-size: 12px;
+	font-weight: bold;
+	background-color: #fff;
+}
+
+#chat-form input#message {
+	width: 200px;
+	height: 30px;
+	padding: 0 0 0 6px;
+	border: none;
+	border-radius: 0 6px 6px 0;
+	outline: none;
+	font-size: 14px;
+	font-weight: bold;
+	background-color: #fff;
+}
+
+#chat-form input[type=submit] {
+	height: 30px;
+	border-radius: 6px;
+	background-color: #fff;
+	outline: none;
+	margin-left: 12px;
+}
